@@ -1,0 +1,20 @@
+// Create project
+dotnet new console -o EFGetStarted
+
+// Install Entity Framework Core for SQLite
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite 
+
+// Install commandline global tool for entity Framework
+dotnet tool install --global dotnet-ef 
+
+// Or update tool
+dotnet tool update --global dotnet-ef 
+
+// Add a necessary EntityFrameworkCore package to the project 
+dotnet add package Microsoft.EntityFrameworkCore.Design 
+
+// Add first migrations
+dotnet ef migrations add InitialCreate
+
+// Perform migrations
+dotnet ef database update 
